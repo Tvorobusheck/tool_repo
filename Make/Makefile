@@ -7,6 +7,7 @@ DIST_DEP = release/1.0-test_work.tar.gz
 targets = @grep "^*: " Makefile | tr ':' ' '
 RUN_ARGS := $(firstword $(MAKECMDGOALS))
 
+# Модификация makefile
 ifneq (targets,$(firstword $(MAKECMDGOALS)))
 $(eval $(RUN_ARGS):; @echo Цель \"$(RUN_ARGS)\" не обнаружена! Введите \"make help\" для показа справки)
 endif
